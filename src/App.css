@@ -1,38 +1,377 @@
-.App {
-  text-align: center;
+
+ .App{
+    background-color: gainsboro;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App{
+    display: flex;  
+    line-height: -2px;
+    }  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.backdrop{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(19, 16, 16, 0.315);
+}
+  
+.form-component i{
+  
+  margin-left:630px;
+} 
+.single-slip{ 
+    display: flex;
+    
+    align-items: start; 
+    background-color:   white; 
+    width: 90%; 
+    padding:18px;  
+    margin-top: 10px;   
+    border-radius: 9px;
+    }   
+
+    .horizontal-view{
+     margin-left: 80px;
+     
+     margin-top: 50px;
+    }
+
+    .horizontal-view img{
+        width: 80px; 
+        height:40px ; 
+       
+    }  
+    .display-slip{
+        display: flex; 
+        align-items:   center;
+    }
+  .text{ 
+       line-height: -3px;
   }
+
+    .card1{
+        display: flex; 
+        align-items: start ; 
+        background-color: white; 
+         margin-top: 50px;
+     }  
+    .toggle{
+        display: flex; 
+        
+    }  
+    .cross {
+        margin-left: 10px;
+    }
+    
+     .v-view{ 
+         margin-left: 10px; 
+         padding-left: 20px; 
+         padding-right: -20px; 
+     }
+
+    .text p{
+         margin-top: -11 px;
+    }
+      
+  
+   .card1 img{
+       width: 40px; 
+       height: 40px;  
+       
+   } 
+   .fab{
+       height: 60px; 
+       width: 60px;
+   }   
+   .slip-img{
+       border-radius: 60%; 
+       overflow: hidden; 
+       margin-top:  20px;  
+       margin-left: 10px; 
+       margin-right: 10px; 
+    
+   }
+   .details p{
+       margin-top: -7px;
+   }
+   .side-nav{
+       width: 41%; 
+       padding: 30px; 
+       z-index: 5;
+       background-color: gainsboro;
+   }  
+   .card1-img{
+       border-radius: 50%; 
+       overflow: hidden; 
+       margin-top: 10px;  
+       margin-left: 20px;
+   }
+
+.fa-elementor{
+    color:rgba(128, 128, 128, 0.678);
+ 
+} 
+.fa-grip-vertical{
+    color: rgba(128, 128, 128, 0.678);
+} 
+.card2 {
+margin-top: 10px; 
+text-align: center;
+background-color: white;
+transition: opacity 500ms ease-in-out, display 1s ease-in-out;
+opacity: 1;
+display: block;
+} 
+
+.componets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    box-shadow: 2px 2px 5px 1px #aaa;
+    background-color: gainsboro;
+    margin: 40px;
+    border-radius: 20px;
+    border: 4px solid gray;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms ease-in-out,visibility 500ms ease-in-out;
+}
+ 
+.error{
+    color: red;
+}
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+}
+.modal-div{
+    background-color: gainsboro;
+    box-shadow: 2px 2px 5px 0.5px #ccc;
+    height: 100%!important;
+    width: 100%!important;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.hide{
+    opacity: 0;
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card3 button{
+     margin-top: 10px; 
+    margin-bottom: 20px;  
+    width: 170px;    
+    color: black;
+    background-color:rgb(19, 179, 184, 0.877) ;
+    width: 70%;
+    border-style: none; 
+    height: 40px; 
+    border-radius: 5px;
+} 
+
+.card3 h5{
+   text-align: center;
+    margin-top: 20px; 
+
+}
+ 
+.details{
+    margin-left: 15px; 
+    
+} 
+
+.h-view i{
+    height: max-content;
+    width: max-content;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.toggle{
+    background-color: rgb(19, 179, 184, 0.87);
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px auto;
+    padding: 14px;
+    border-radius: 5px;
+}   
+ .title{margin-top: -10px;}
+  .date{
+      margin-top: -11px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.text{   
+     margin-left: 10px; 
+     margin-top: -2px;
+}  
+  
+
+.details{
+    margin-top: 10px;
+}  
+.card3{
+    background-color: white; 
+    text-align: center;
+} 
+
+.card2   , .card3 , .card1{
+    width: 250px;
+    padding: 10px 0;
+    margin-bottom: 20px; 
+    border-radius: 7px;
+}  
+
+  .box-view{ 
+    width: 30% ;
+
+
+  } 
+  .vertical-component  section{
+      display: flex; 
+       width  : 95%; 
+       margin-top: 10px;
+      flex-wrap: wrap; 
+      justify-content: space-around;  
+       
+      
+  } 
+  .v-image{
+      width: 240px; 
+      height: 140px;
+  } 
+
+
+.vertical-component{
+    margin-left: 120px; 
+    margin-top: 50px;
+}   
+
+.fa-times { 
+    color: rgb(224, 152, 139);
+    margin-left:  231px  ;
 }
+ 
+ .vertical-component section article{
+     margin-left: 10px; 
+     background-color: white ; 
+     padding: 10px 10px; 
+     margin-bottom: 27px;
+ }
+ .from{
+     display: flex; 
+     flex-direction: column;
+ } 
+
+ .from input {
+     width: 270px; 
+     border-style:  none; 
+     box-shadow: 1px 4px 10px rgba(117, 119, 119, 0.342);
+ } 
+
+ .list {
+     width: 300px; 
+     height: 30px; 
+     border-style:  none; 
+     box-shadow: 1px 4px 10px rgba(117, 119, 119, 0.342);
+
+
+  } 
+
+  #code{
+     width: 40px;   
+     border-style:  none;
+     box-shadow: 1px 4px 10px rgba(117, 119, 119, 0.342);
+
+    } 
+
+  #no {
+     width: 230px; 
+     border-style:  none; 
+     box-shadow: 1px 4px 10px rgba(117, 119, 119, 0.342);
+ } 
+
+ .from button{
+     width: 200px;   
+     margin-top: 20px;   
+     border-style:  none; 
+     background-color: rgb(37, 218, 97) ;      
+     color: white;  
+    border-radius: 4px; 
+    font-weight:500;  
+    height: 30px;
+} 
+
+      
+
+textarea  {
+    width: 460px ; 
+    height: 80px; 
+    border-style:  none; 
+    box-shadow: 1px 4px 10px rgba(117, 119, 119, 0.342);
+} 
+
+.form-component{
+    padding: 20px;
+    background-color: gainsboro; 
+    width: 50%;  
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: translateX(46%);
+    transition: transform 500ms ease-in-out;
+    z-index: 3;
+} 
+
+.open{
+    transform: translateX(-146%);
+}
+
+.from{
+    margin-top: 2px;
+    height: 100vh;
+} 
+
+.from label {
+    margin-top: 5px;
+} 
+
+.m-body {
+    display: flex;
+}
+   
+
+.m-header img{
+ height: 100px; 
+ width :100%  ;
+}  
+
+
+.iconss  , .modal-nav{
+      display: flex; 
+      margin-left: 2px; 
+}
+ 
+ .iconss {    
+     justify-content: end ; 
+
+ }  
+ .modal-nav {
+     justify-content:space-around  ; 
+    
+ } 
+ .modal-left {
+     width: 60%; 
+
+ } 
+
+ .iconss i {
+     margin-left: -20px ;
+ } 
+  
+ .modal-nav p {
+    margin-left: -60px ;
+ }
