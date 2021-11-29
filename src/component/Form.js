@@ -6,15 +6,21 @@ import * as Yup from 'yup';
 
      
 const SignupSchema = Yup.object().shape({
-    firstName: Yup.string()
+     
+     firstName: Yup.string() 
+      .min(2, 'Too Short!')
+      .max(20, 'Too Long!')
+      .required('Required'),
+      lastname: Yup.string()
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Required'),
-    lastName: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required('Required'),
-    email: Yup.string().email('Invalid email').required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'), 
+    number: Yup.number()
+    .required('Required')
+    .typeError("That doesn't look like a phone number")
+    .positive("A phone number can't start with a minus")
+    .integer("A phone number can't include a decimal point"),
   });   
   
 const Form = ({showForm ,  setShowForm }) => {
@@ -30,7 +36,7 @@ const Form = ({showForm ,  setShowForm }) => {
      < h5>Thank you so much for taking the time! </h5> 
     <p>please provide below details</p>
   <Formik 
-    initialValues={{ email: '',  firstName: '' , lastname :""  ,  Address:"" ,  textarea:''   , code :" " , number : " " }}
+    initialValues={{ email:'',  firstname:" " , lastname :" "  ,  Address:" " ,  textarea:''   , code :" " , number :" " }}
     validationSchema={SignupSchema} 
     onSubmit={(values, { setSubmitting }) => {
     
@@ -46,15 +52,15 @@ const Form = ({showForm ,  setShowForm }) => {
     isSubmitting,
     
   }) => ( <form className='from' onSubmit={handleSubmit}>
-        <label>First name:</label>
+        <label>First name:</label> {console.log(errors)}
         <input
       type="text"
-      name="firstName "
+      name="firstname"
       onChange={handleChange}
       onBlur={handleBlur}
-      value={values.firstName}
-      placeholder="john "
-    />  
+      value={values.firstname}
+      placeholder="john" 
+          />  
     <p className="">{errors.firstName && touched.firstName && errors.firstName}  </p> 
         <label>Last name:</label>
          <input
@@ -94,13 +100,13 @@ const Form = ({showForm ,  setShowForm }) => {
       placeholder=" +91  "
     /> 
           <input
-      type="number"
+      type="cell"
       name="number" 
       id="no"
       onChange={handleChange}
       onBlur={handleBlur}
-      value={values.email}
-      placeholder=" 1234567"
+      value={values.number}
+      placeholder="1234567"
     />   
      <p className ="error" >{errors.number && touched.number && errors.number} </p>
         </div>
