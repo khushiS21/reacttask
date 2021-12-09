@@ -1,11 +1,13 @@
-const Modal = ({setShowModal}) => {
+ import sky from "../img/skyyyy.jpg";
+
+ const Modal = ({setShowModal}) => {
     return ( 
         <> 
         <div class="modal-div">
          <div className='modal-body '>
         <div className='m-header'>
         <i class="fas fa-times-circle fa-lg "  onClick={()=>setShowModal(false)} ></i> 
-        <img src='/skyyyy.jpg'  alt='skyyyy' /> 
+        <img src= {sky}  alt='skyyyy' /> 
             <div className='iconss'>
             <i class="fab fa-twitter-square"></i>
             <i class="fab fa-linkedin"></i>

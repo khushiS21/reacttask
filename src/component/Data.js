@@ -1,5 +1,5 @@
 
- 
+ import persn from "../img/persnn.jpg"
  const Data = ({item,setShowModal}) => {
    
     return(
@@ -8,7 +8,7 @@
         const {id,title,body}=user;
         return  <article  className=' display-slip'key= {id}> 
         <div className='single-slip' > 
-        <div className='slip-img'><img src='/persnn.jpg' alt='imgg' /></div>
+        <div className='slip-img'><img src={persn} alt='imgg' /></div>
         <div className='text '>  
         <h6 className='title' onClick={()=>setShowModal(true)} >{title}</h6> 
         <p className='body' > {body}</p>  

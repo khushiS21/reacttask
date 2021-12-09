@@ -1,3 +1,7 @@
+ 
+
+ import pic from "../img/ll.jpg" ;
+
 
 const Record = ({rec,setShowModal}) => {
      return(
@@ -9,7 +13,8 @@ const Record = ({rec,setShowModal}) => {
          <h5 onClick={()=>setShowModal(true)} >{title}</h5>
          <p>{body} </p> 
          <p style={{color:'grey'}}>Mon, 21 Dec 2020 14.5654 GMT </p> 
-         <img  className=' v-image'   src='/ll.jpg' alt='picsss'/>
+         <img  className=' v-image'   src= {pic} alt='picsss'/> 
+         
          </article>
         })}
         </section>

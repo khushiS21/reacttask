@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
- import {Link} from 'react-router-dom'  
+import girl from  "../img/girll.jpg" 
+import React, { useState } from 'react' 
+import {Link} from 'react-router-dom' 
 import Form from './Form';
 const Sidebar = () => {
     const [showForm,setShowForm]=useState(false)
@@ -8,7 +9,7 @@ const Sidebar = () => {
         <div className="backdrop" style={{display: !showForm?'block':"none"}}></div>
          <div className='side-nav' style={{ boxShadow: showForm?"3px 3px 5px  rgb(190, 188, 188)":"none"}} > 
          <div className='card1' >
-         <div className='card1-img'> <img src='/girll.jpg  ' alt='lal'></img> </div>
+         <div className='card1-img'> <img src={girl} alt='lal'></img> </div>
           <div className='details' >
             <h6>Hi  Reader,</h6>  
             <p>Here's your Name !</p> 
